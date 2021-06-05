@@ -31,7 +31,7 @@ ReentrantLock 是 JUC 并发包中提供的可重入锁，通过设置 state 与
 
 *   以公平方式获取锁，仅仅去需要将上图的 ReentrantLock.NonfairSync#tryAcquire 和 ReentrantLock.Sync#nonfairTryAcquire 替换成 ReentrantLock.FairSync#tryAcquire 即可
 
-**小结：**实际上有了 AQS ，我们需要实现的函数只有以下5个，一般不需要全部实现，tryAcquire-tryRelease 和 tryAcquireShared-tryReleaseShared 一般实现一对即可。特别的，ReentrantReadWriteLock 既实现了独占获取，也实现了共享获取。
+**小结**：实际上有了 AQS ，我们需要实现的函数只有以下5个，一般不需要全部实现，tryAcquire-tryRelease 和 tryAcquireShared-tryReleaseShared 一般实现一对即可。特别的，ReentrantReadWriteLock 既实现了独占获取，也实现了共享获取。
 
 | 方法名                                      | 描述                                                         |
 | :------------------------------------------ | :----------------------------------------------------------- |
